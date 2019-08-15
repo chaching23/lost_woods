@@ -1,0 +1,28 @@
+@model List<Dictionary<string, object>>
+
+
+
+<table class="table">
+  <thead class="thead-dark">
+        <tr>
+        <th scope="col">Trail Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Trail Length</th>
+        <th scope="col">Elevation</th>
+            <th scope="col">Longitude & Latitude</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+@foreach(var i in Model){
+        <tr>
+            <td>@i["name"]</td>
+            <td>@i["description"]</td>
+            <td>@i["length"] Miles</td>
+            <td>@i["elevation"] Feet</td>
+            <td>@i["longlat"]</td>
+        </tr>
+    }
+    </tbody>
+</table>
